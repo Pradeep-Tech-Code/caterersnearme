@@ -4,7 +4,7 @@ const { connectDB } = require('./db');
 const caterersRouter = require('./routes/caterers');
 const errorHandler = require('./middlewares/errorHandler');
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors());
