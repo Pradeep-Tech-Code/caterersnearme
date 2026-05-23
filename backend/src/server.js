@@ -3,6 +3,8 @@ const cors = require('cors');
 const { connectDB } = require('./db');
 const caterersRouter = require('./routes/caterers');
 const errorHandler = require('./middlewares/errorHandler');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 const app = express();

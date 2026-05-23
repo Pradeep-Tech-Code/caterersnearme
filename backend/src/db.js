@@ -1,6 +1,10 @@
 const { MongoClient, ObjectId } = require('mongodb');
-
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017';
+const dotenv = require('dotenv');
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+dotenv.config();
+const MONGO_URI = process.env.MONGO_URI;
+console.log(MONGO_URI);
 const DB_NAME = 'caterersDB';
 const COLLECTION_NAME = 'caterers';
 
